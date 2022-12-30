@@ -1,11 +1,16 @@
 <h1>Pokemons List</h1>
 <input 
     #input
-    (keyup)="selectPokemon(input.value)"
+    (keyup.enter)="selectPokemon(input.value)"
     type="number"  
 />
 
-<p>{{ pokemonSelected?.name }}</p>
+<p *ngIf="pokemonSelected"> 
+    Vous avez sélectionné le pokemon : {{ pokemonSelected?.name }}
+</p>
+<p *ngIf="!pokemonSelected"> 
+    Vous avez sélectionné un pokemon inexistant
+</p>
 <p>{{ pokemonsList[0].name}}</p>
 <p>{{ pokemonsList[1].name}}</p>
 <p>{{ pokemonsList[2].name}}</p>
