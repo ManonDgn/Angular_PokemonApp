@@ -11,13 +11,15 @@ import { AppRoutingModule } from './app-routing.module';
 // import premier composant
 import { AppComponent } from './app.component';
 import { BorderCardDirective } from './border-card.directive';
+import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 
 // déclaration des modules
 @NgModule({
   // composants et directives (non-modules)
   declarations: [
     AppComponent,
-    BorderCardDirective
+    BorderCardDirective,
+    PokemonTypeColorPipe
   ],
   // autres modules imbriqués dans ce module
   imports: [
