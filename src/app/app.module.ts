@@ -10,12 +10,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 // import premier composant
 import { AppComponent } from './app.component';
+import { BorderCardDirective } from './border-card.directive';
 
 // déclaration des modules
 @NgModule({
   // composants et directives (non-modules)
   declarations: [
-    AppComponent
+    AppComponent,
+    BorderCardDirective
   ],
   // autres modules imbriqués dans ce module
   imports: [
