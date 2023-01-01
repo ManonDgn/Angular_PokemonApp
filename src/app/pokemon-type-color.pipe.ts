@@ -1,8 +1,9 @@
+// Import du module du filtre natif (PIPE)
 import { Pipe, PipeTransform } from '@angular/core';
 
-/*
- * Affiche la couleur correspondant au type du pokémon.
- * Prend en argument le type du pokémon.
+/* Le filtre va :
+ * Afficher la couleur correspondant au type du pokémon.
+ * Prendre en argument le type du pokémon.
  * Exemple d'utilisation:
  *   {{ pokemon.type | pokemonTypeColor }}
 */
@@ -49,7 +50,8 @@ export class PokemonTypeColorPipe implements PipeTransform {
         color = 'grey';
         break;
     }
-  
+
+    // chip est le format étiquette de Materialize qui contient les types et leurs couleurs
     return 'chip ' + color;
   
   }

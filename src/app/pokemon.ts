@@ -1,3 +1,4 @@
+// Classe principale de l'app et ses propriétés + type
 export class Pokemon {
     id: number;
     hp: number;

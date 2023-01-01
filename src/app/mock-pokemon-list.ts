@@ -1,5 +1,7 @@
+// import de la classe Pokemon
 import { Pokemon } from './pokemon';
-  
+
+//export des données de la classe Pokemon
 export const POKEMONS: Pokemon[] = [
     {
         id: 1,
