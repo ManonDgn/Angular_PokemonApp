@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { POKEMONS } from '../mock-pokemon-list';
 import { Pokemon } from '../pokemon';
 
+// Composant permettant d'afficher un pokémon spécifique en fonction de la liste totale
 @Component({
   selector: 'app-detail-pokemon',
   templateUrl: './detail-pokemon.component.html'

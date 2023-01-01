@@ -8,28 +8,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 // import routeur
 import { AppRoutingModule } from './app-routing.module';
-// import composants et pipes
+// import composants 
 import { AppComponent } from './app.component';
-import { BorderCardDirective } from './border-card.directive';
-import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
-import { ListPokemonComponent } from './list-pokemon/list-pokemon.component';
-import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PokemonModule } from './pokemon/pokemon.module';
 
 // déclaration des modules
 @NgModule({
   // composants et directives (non-modules)
   declarations: [
     AppComponent,
-    BorderCardDirective,
-    PokemonTypeColorPipe,
-    ListPokemonComponent,
-    DetailPokemonComponent,
     PageNotFoundComponent
   ],
-  // autres modules imbriqués dans ce module
+  // autres modules imbriqués dans ce module (! attention à l'ordre d'éxécution)
   imports: [
     BrowserModule,
+    PokemonModule,
     AppRoutingModule
   ],
   // injection de dépendances

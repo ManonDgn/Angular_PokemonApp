@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { POKEMONS } from '../mock-pokemon-list';
 import { Pokemon } from '../pokemon';
 
+// Composant permettant d'afficher tous les pokémons présents dans le fichier POKEMONS
 @Component({
   selector: 'app-list-pokemon',
   templateUrl: './list-pokemon.component.html'
