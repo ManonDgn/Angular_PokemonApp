@@ -3,6 +3,7 @@
 
 // import crea-config de modules d'Angular
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 // module qui fournit des directives nécessaires à l'app
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -23,6 +24,7 @@ import { PokemonModule } from './pokemon/pokemon.module';
   // autres modules imbriqués dans ce module (! attention à l'ordre d'éxécution)
   imports: [
     BrowserModule,
+    FormsModule,
     PokemonModule,
     AppRoutingModule
   ],

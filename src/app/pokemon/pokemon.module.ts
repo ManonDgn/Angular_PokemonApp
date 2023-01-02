@@ -6,9 +6,13 @@ import { BorderCardDirective } from './border-card.directive';
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 import { RouterModule, Routes } from '@angular/router';
 import { PokemonService } from './pokemon.service';
+import { FormsModule } from '@angular/forms';
+import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
+import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 
 // séparation des routes liées à toute la partie pokémon et non racine (app.routing.module)
 const pokemonRoutes: Routes = [
+  { path: 'edit/pokemons/:id', component: EditPokemonComponent },
   { path: 'pokemons', component: ListPokemonComponent },
   { path: 'pokemons/:id', component: DetailPokemonComponent },
 ]
@@ -18,10 +22,13 @@ const pokemonRoutes: Routes = [
     ListPokemonComponent,
     DetailPokemonComponent,
     BorderCardDirective,
-    PokemonTypeColorPipe
+    PokemonTypeColorPipe,
+    PokemonFormComponent,
+    EditPokemonComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(pokemonRoutes)
   ],
   providers: [
