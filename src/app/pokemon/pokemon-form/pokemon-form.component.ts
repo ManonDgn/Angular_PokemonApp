@@ -45,13 +45,13 @@ export class PokemonFormComponent implements OnInit {
 
     if(this.pokemon.types.length > 2 && !this.hasType(type)) {
       return false;
+    } else {
+      return true;
     }
-
-    return true;
   }
 
   onSubmit(){
     console.log('Submit Form');
-    this.router.navigate(['/pokemons/', this.pokemon.id]);
+    this.router.navigate(['pokemons/', this.pokemon.id]);
   }
 }

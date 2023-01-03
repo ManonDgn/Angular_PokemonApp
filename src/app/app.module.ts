@@ -6,6 +6,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 // module qui fournit des directives nécessaires à l'app
 import { BrowserModule } from '@angular/platform-browser';
+// import module HTTP
+import { HttpClientModule } from '@angular/common/http';
 
 // import routeur
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +27,7 @@ import { PokemonModule } from './pokemon/pokemon.module';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     PokemonModule,
     AppRoutingModule
   ],
